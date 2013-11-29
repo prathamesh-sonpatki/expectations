@@ -1,0 +1,9 @@
+* Basic idea
+** Write expectations about the input
+** Raise error or print something or do whatever if the expectations are not met
+** Go to next step if expectations are met
+** Example syntax: 
+   expect(params).to_have_key(:contact)
+   expect(number).to_be_non_zero do 
+     puts "Caught you! You are ZERO! GO AWAY!!!!"
+   end
