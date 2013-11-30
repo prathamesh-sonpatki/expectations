@@ -20,7 +20,7 @@ end
 
 # Example
 
-# extend Expcetations
+# extend Expectations
 
 # expect(params).to_have_key(:user) do
 #   "Invalid input. Expected key :user to be present"
