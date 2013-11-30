@@ -2,6 +2,7 @@ module HashObject
   def to_have_key(key)
     return true if self.should_be_hash && @object.keys.include?(key)
     @errors << "Expected key #{key.inspect} to be present. Not found."
+    return yield(self) if block_given?
     false
   end
 

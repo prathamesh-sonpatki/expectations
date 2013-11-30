@@ -24,5 +24,12 @@ describe ExpectationObject do
       expect(exp_object.to_have_key(:user)).to be true
       expect(exp_object.errors).to eq []
     end
+
+    it "yield the given block if key is not present in the object and block is given" do
+      result = @exp_object.to_have_key(:user) do |obj|
+        obj.errors.join(", ")
+      end
+      expect(result).to eq "Expected key :user to be present. Not found."
+    end
   end
 end
