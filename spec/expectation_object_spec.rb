@@ -18,5 +18,11 @@ describe ExpectationObject do
       expect(@exp_object.to_have_key(:user)).to be false
       expect(@exp_object.errors).to eq ["Expected key :user to be present. Not found."]
     end
+
+    it "returns true if the key is present in the object" do
+      exp_object = ExpectationObject.new({:user => "Prathamesh" })
+      expect(exp_object.to_have_key(:user)).to be true
+      expect(exp_object.errors).to eq []
+    end
   end
 end
