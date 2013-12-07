@@ -13,7 +13,7 @@ describe InputExpectations do
     end
 
     it "creates instance of ExpectationObject" do
-      expect(TestClass.expect({}).class).to be ExpectationObject
+      (TestClass.expect({}).class).should == ExpectationObject
     end
   end
 end

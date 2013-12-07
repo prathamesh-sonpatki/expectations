@@ -14,4 +14,11 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = 'random'
+  # Disable expect syntax as it conflicts with this gem's syntax
+  config.expect_with :rspec do |c|
+    c.syntax = :should
+  end
+  config.mock_with :rspec do |c|
+    c.syntax = :should
+  end
 end
